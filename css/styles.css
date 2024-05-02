@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  background: hsl(0, 0%, 95%);
+}
+
+.card {
+  width: min(87.1%, 920px);
+  margin-top: 4.9rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.card section {
+  padding: 3rem;
+}
+.card section img {
+  margin-bottom: 1.95rem;
+}
+.card section h2 {
+  margin-bottom: 1.55rem;
+  font-size: 2.5rem;
+  color: hsl(0, 0%, 95%);
+  font-family: "Big Shoulders Display", sans-serif;
+  text-transform: uppercase;
+}
+.card section p {
+  font-size: 0.935rem;
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.675;
+}
+.card section button {
+  margin-top: 5.2rem;
+  padding: 0.815rem 1.85rem;
+  border: 1.5px solid hsl(0, 0%, 95%);
+  background: hsl(0, 0%, 95%);
+  border-radius: 4rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+.card section button:hover {
+  background: transparent;
+}
+.card section#sedans {
+  border-radius: 0.5rem 0 0 0.5rem;
+  background: hsl(31, 77%, 52%);
+}
+.card section#sedans button {
+  color: hsl(31, 77%, 52%);
+}
+.card section#sedans button:hover {
+  color: hsl(0, 0%, 95%);
+}
+.card section#suvs {
+  background: hsl(184, 100%, 22%);
+}
+.card section#suvs button {
+  color: hsl(184, 100%, 22%);
+}
+.card section#suvs button:hover {
+  color: hsl(0, 0%, 95%);
+}
+.card section#luxury {
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: hsl(179, 100%, 13%);
+}
+.card section#luxury button {
+  color: hsl(179, 100%, 13%);
+}
+.card section#luxury button:hover {
+  color: hsl(0, 0%, 95%);
+}
+
+@media (max-width: 900px) {
+  .card {
+    max-width: 600px;
+    margin: 5.25rem 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    position: relative;
+    transform: translate(-50%);
+  }
+  .card section button {
+    margin-top: 1.55rem;
+  }
+  .card section#sedans {
+    border-radius: 0.5rem 0.5rem 0 0;
+    background: hsl(31, 77%, 52%);
+  }
+  .card section#sedans button {
+    color: hsl(31, 77%, 52%);
+  }
+  .card section#sedans button:hover {
+    color: hsl(0, 0%, 95%);
+  }
+  .card section#suvs {
+    background: hsl(184, 100%, 22%);
+  }
+  .card section#suvs button {
+    color: hsl(184, 100%, 22%);
+  }
+  .card section#suvs button:hover {
+    color: hsl(0, 0%, 95%);
+  }
+  .card section#luxury {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+  .card section#luxury button {
+    color: hsl(179, 100%, 13%);
+  }
+  .card section#luxury button:hover {
+    color: hsl(0, 0%, 95%);
+  }
+}/*# sourceMappingURL=styles.css.map */

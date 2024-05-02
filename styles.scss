@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+$primaryOrange: hsl(31, 77%, 52%);
+$primaryCyan: hsl(184, 100%, 22%);
+$primaryDarkCyan: hsl(179, 100%, 13%);
+
+$textColor: hsla(0, 0%, 100%, 0.75);
+$boldColor: hsl(0, 0%, 95%);
+
+body {
+  background: $boldColor;
+}
+
+.card {
+  width: min(87.1%, 920px);
+  margin-top: 4.9rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  section {
+    padding: 3rem;
+
+    img {
+      margin-bottom: 1.95rem;
+    }
+
+    h2 {
+      margin-bottom: 1.55rem;
+      font-size: 2.5rem;
+      color: $boldColor;
+      font-family: "Big Shoulders Display", sans-serif;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 0.935rem;
+      color: $textColor;
+      line-height: 1.675;
+    }
+
+    button {
+      margin-top: 5.2rem;
+      padding: 0.815rem 1.85rem;
+      border: 1.5px solid $boldColor;
+      background: $boldColor;
+      border-radius: 4rem;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: 0.1s ease;
+
+      &:hover {
+        background: transparent;
+      }
+    }
+
+    &#sedans {
+      border-radius: 0.5rem 0 0 0.5rem;
+      background: $primaryOrange;
+
+      button {
+        color: $primaryOrange;
+
+        &:hover {
+          color: $boldColor;
+        }
+      }
+    }
+
+    &#suvs {
+      background: $primaryCyan;
+
+      button {
+        color: $primaryCyan;
+
+        &:hover {
+          color: $boldColor;
+        }
+      }
+    }
+
+    &#luxury {
+      border-radius: 0 0.5rem 0.5rem 0;
+      background: $primaryDarkCyan;
+
+      button {
+        color: $primaryDarkCyan;
+
+        &:hover {
+          color: $boldColor;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .card {
+    max-width: 600px;
+    margin: 5.25rem 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    position: relative;
+    transform: translate(-50%);
+
+    section {
+      button {
+        margin-top: 1.55rem;
+      }
+
+      &#sedans {
+        border-radius: 0.5rem 0.5rem 0 0;
+        background: $primaryOrange;
+
+        button {
+          color: $primaryOrange;
+
+          &:hover {
+            color: $boldColor;
+          }
+        }
+      }
+
+      &#suvs {
+        background: $primaryCyan;
+
+        button {
+          color: $primaryCyan;
+
+          &:hover {
+            color: $boldColor;
+          }
+        }
+      }
+
+      &#luxury {
+        border-radius: 0 0 0.5rem 0.5rem;
+
+        button {
+          color: $primaryDarkCyan;
+
+          &:hover {
+            color: $boldColor;
+          }
+        }
+      }
+    }
+  }
+}
