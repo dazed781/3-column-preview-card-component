@@ -12,7 +12,6 @@ body {
 
 .card {
   width: min(87.1%, 920px);
-  margin-top: 4.9rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   position: absolute;
